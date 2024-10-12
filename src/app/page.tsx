@@ -96,7 +96,7 @@ export default function Home() {
               <FlipWords words={word} /> <br />
             </div>
             <Link
-              href={"https://wa.me/088245302593"}
+              href={"https://wa.me/+6288245302593"}
               className=" mt-5 mb-10 flex items-center border border-green-500 hover:bg-green-500 text-green-500 hover:text-white font-semibold py-3 px-8 rounded shadow-md transition duration-300"
             >
               {/* Ikon Telepon WhatsApp */}
