@@ -7,9 +7,10 @@ import img from "@/app/img/matahari.png";
 import logo from "@/app/img/teamhindia.png";
 import Countdown from "@/components/countdown";
 import { FlipWords } from "@/components/ui/flip-words";
+import Link from "next/link";
 
 export default function Home() {
-  const word: string[] = ["bernyanyi", "berkaroke", "berdansa"];
+  const word: string[] = ["bernyanyi", "berkaraoke", "berdansa"];
   const [isSunset, setIsSunset] = useState(false);
   const [isMatahariVisible, setIsMatahariVisible] = useState(true);
   const [isTextVisible, setIsTextVisible] = useState(false);
@@ -94,7 +95,10 @@ export default function Home() {
               Datang dan
               <FlipWords words={word} /> <br />
             </div>
-            <button className=" mt-5 mb-10 flex items-center border border-green-500 hover:bg-green-500 text-green-500 hover:text-white font-semibold py-3 px-8 rounded shadow-md transition duration-300">
+            <Link
+              href={"https://wa.me/088245302593"}
+              className=" mt-5 mb-10 flex items-center border border-green-500 hover:bg-green-500 text-green-500 hover:text-white font-semibold py-3 px-8 rounded shadow-md transition duration-300"
+            >
               {/* Ikon Telepon WhatsApp */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +109,7 @@ export default function Home() {
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.254.725 4.369 1.952 6.086L0 24l5.824-1.949C7.731 23.275 9.708 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.115 17.11l-.003.002c-.264.363-.839.747-1.752.747-.745 0-1.453-.304-1.93-.822-.357-.387-1.327-1.396-1.517-1.673-.158-.245-.179-.582-.057-.81.125-.228.408-.337.663-.155.12.094.826.592 1.161.826.202.182.495.334.793.334.215 0 .451-.042.653-.215.255-.235.251-.558.002-.774l-1.09-1.09c-.317-.317-.798-.343-1.111-.058l-.013.013c-.174.174-.212.383-.097.582.138.218.379.392.611.392.151 0 .314-.054.434-.174.286-.283.243-.678.047-.973l-1.645-1.645c-.314-.314-.783-.328-1.098-.014l-.003.002c-.134.135-.146.337-.015.485.387.423 1.4 1.429 1.916 1.934.384.363.879.66 1.471.66.929 0 1.813-.471 2.305-1.25.463-.746.544-1.513.234-2.206-.236-.59-.707-1.057-1.373-1.175-.08-.016-.095-.016-.188-.01-.03.003-.062.008-.091.013-.354.075-.668.24-.956.49-.231.213-.496.5-.498.5-.014 0-.271-.225-.668-.46-.496-.267-.871-.557-1.249-.87-.351-.293-.513-.703-.487-1.096.022-.342.116-.629.25-.89.112-.195.173-.265.286-.247.14.024.379.16.57.32l.004-.004c.166.155.328.338.39.39 0 0 .03.028.097.064.161.088.442.156.653.17.262.017.45-.003.64-.103.405-.229.75-.736.958-1.075.091-.156.15-.244.152-.244.016-.039.04-.057.079-.057.005 0 .01 0 .016.002.33.016.597.21.63.554.004.037.016.195.047.292.166.532.437 1.308 1.085 1.828.364.303.726.388 1.045.388 1.271 0 2.512-1.516 2.877-2.536.166-.469.232-1.044.08-1.515-.132-.486-.557-.919-1.076-1.104-.149-.061-.338-.105-.563-.122z" />
               </svg>
               <span>Pesan tiket Sekarang</span>
-            </button>
+            </Link>
             <div className=" ">
               <Countdown targetDate={targetDate} />
             </div>
